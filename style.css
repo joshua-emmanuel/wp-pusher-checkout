@@ -53,5 +53,320 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #1D2C3C;
   background-color:  #F5F8FA;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.875rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+h2 {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+.header {
+  padding: 1.75rem 2.5rem;
+}
+
+.header > .flex {
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.75rem;
+  border-bottom: 2px solid #E0E6EA;
+}
+
+.header__nav .flex {
+  gap: 2.5rem;
+}
+
+.header__nav li {
+  list-style-type: none;
+}
+
+.header__nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__nav-btn {
+  padding: 0.69rem 1.25rem 0.75rem 1.19rem;
+  border-radius: 0.375rem;
+  border: 2px solid #646E7A;
+}
+
+.wrapper {
+  width: min(55.75rem, 100%);
+  margin-inline: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 2rem;
+  border-radius: 0.375rem;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
+}
+
+@media (max-width: 920px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .header .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Checkout Form */
+.checkout-form {
+  border-radius: 0.375rem 0rem 0rem 0.375rem;
+  background-color: white;
+  padding-block: .5rem;
+}
+
+.checkout-form__section {
+  padding: 2.5rem 3rem;
+}
+
+.checkout-form__section-heading {
+  align-items: center;
+  gap: .62rem;
+  margin-bottom: 0.56rem;
+}
+
+.checkout-form h2 {
+  font-size: 1.125rem;
+}
+
+.circular-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  border: 2px solid #548BC5;
+  color: #548BC5;
+}
+
+.checkout-form hr {
+  border: 0;
+  height: 0.125rem;
+  background-color: #F5F7FA;
+}
+
+.form-group {
+  gap: 1.88rem;
+  margin-bottom: 0.94rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.44rem;
+}
+
+.form-field label {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #1D2C3C;
+}
+
+.form-field input {
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 0.56rem 1rem 0.62rem 0.81rem;
+  background-color: #EDEFF2;
+}
+
+.form-field input:focus {
+  outline: 2px solid #548BC5;
+}
+
+.credit-card-form-field > div {
+  border-radius: 0.25rem;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #EDEFF2;
+}
+
+.credit-card-form-field:focus-within > div {
+  outline: 2px solid #548BC5;
+}
+
+.credit-card-form-field input {
+  outline: none;
+  border: 0;
+  padding: 0.56rem 1rem 0.62rem 0.81rem;
+  width: 9.625rem;
+  background-color: transparent;
+}
+
+#card-cvc {
+  width: 5rem;
+}
+
+.checkout-form button[type="submit"] {
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02475rem;
+  border: 0;
+  width: 100%;
+  border-radius: 0.3125rem;
+  padding-block: 0.81rem 1.06rem;
+  color: white;
+  background-color: #038E7D;
+}
+
+.checkout-form .help {
+  gap: 0.35rem;
+  justify-content: center;
+  align-items: start;
+  padding-block: 1.5rem;
+  font-size: 0.875rem;
+  color: #646E7A;
+}
+
+.checkout-form .help span {
+  font-weight: 700;
+  color: #1D2C3C;
+}
+
+.checkout-form .help svg {
+  margin-top: .1rem;
+}
+
+.stripe-icon {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Payment Plan Section */
+.payment-plan-section {
+  padding: 3rem 2.75rem 5rem;
+  border-radius: 0rem 0.375rem 0.375rem 0rem;
+  color: white;
+  background-color: #1179BF;
+}
+
+.payment-plan-section h2 {
+  font-size: 1.25rem;
+  letter-spacing: -0.00063rem;
+}
+
+.payment-plan-section__top {
+  padding-right: 1.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2005);
+}
+
+.payment-plan-section__top > div {
+  margin-bottom: 2.25rem;
+}
+
+.freelancer-plan {
+  font-weight: 700;
+}
+
+.freelancer-plan .dollar-sign {
+  position: relative;
+  font-size: 1.5rem;
+  top: -1.25rem;
+}
+
+.freelancer-plan em {
+  font-weight: 400;
+}
+
+.freelancer-plan-features {
+  display: grid;
+  gap: 1rem;
+}
+
+.freelancer-plan-features div {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.payment-plan-section__top .freelancer-plan .huge {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+
+.plan-cta {
+  position: relative;
+}
+
+.plan-cta span {
+  font-weight: 700;
+}
+
+.plan-cta a {
+  color: white;
+  text-decoration: none;
+}
+
+.plan-cta a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: .25rem;
+  width: 11.25rem;
+  height: 0.25rem;
+  opacity: 0.5036;
+  background-color: #B9F5FF;
+  z-index: 99;
+}
+
+.testimonial {
+  padding-top: 2.56rem;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1.06rem;
+}
+
+.testimonial blockquote span {
+  font-weight: 700;
+}
+
+.testimonial-author {
+  gap: 0.88rem;
+  align-items: center;
+  font-weight: 700;
+}
+
+.testimonial-author img {
+  border-radius: 50%;
+}
+
+
+/* Footer */
+.footer {
+  font-size: .875rem;
+  color: #636B6F;
+  text-align: center;
+  padding-block: 2rem 5rem;
+}
+
+.footer a {
+  color: #31708F;
+  text-decoration: none;
 }
